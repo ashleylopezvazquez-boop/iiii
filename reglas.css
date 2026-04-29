@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: Lavenderblush;
+    max-width: 1200px; /* tamaño máximo */
+    margin: auto;      /* centrado */
+    display: flex;
+}
+
+.contenedor{
+    display: grid;
+
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px 150px 150px;
+}
+
+.productos{
+    background-color: aqua;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tablet */
+@media (max-width:700px){
+    .contenedor{
+        grid-template-columns: auto auto;
+        grid-template-rows: 150px 150px 150px 150px;
+    }
+}
+
+/* Celular */
+@media (max-width:450px){
+    .contenedor{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(7, 150px);
+    }
+}
